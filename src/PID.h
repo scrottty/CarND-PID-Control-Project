@@ -9,13 +9,20 @@ public:
   double p_error;
   double i_error;
   double d_error;
-
+  double previousError;
+  
   /*
   * Coefficients
   */ 
   double Kp;
   double Ki;
   double Kd;
+  
+  double timeDiff;
+  
+  double currentOutput;
+  
+  
 
   /*
   * Constructor
@@ -36,6 +43,9 @@ public:
   * Update the PID error variables given cross track error.
   */
   void UpdateError(double cte);
+  
+  // Calc output
+  void CalcOutput();
 
   /*
   * Calculate the total PID error.

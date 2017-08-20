@@ -7,7 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		078290501F490DD900EBF857 /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 0782904F1F490DD900EBF857 /* main.cpp */; };
+		07A5487F1F490FD900A3F433 /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 07A5487C1F490FD900A3F433 /* main.cpp */; };
+		07A548801F490FD900A3F433 /* PID.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 07A5487D1F490FD900A3F433 /* PID.cpp */; };
+		07A548891F49518400A3F433 /* TWIDDLE.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 07A548881F49518400A3F433 /* TWIDDLE.cpp */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -24,7 +26,12 @@
 
 /* Begin PBXFileReference section */
 		0782904C1F490DD900EBF857 /* xcode_project */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = xcode_project; sourceTree = BUILT_PRODUCTS_DIR; };
-		0782904F1F490DD900EBF857 /* main.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = main.cpp; sourceTree = "<group>"; };
+		07A5487B1F490FD900A3F433 /* json.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; name = json.hpp; path = ../../src/json.hpp; sourceTree = "<group>"; };
+		07A5487C1F490FD900A3F433 /* main.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; lineEnding = 0; name = main.cpp; path = ../../src/main.cpp; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.cpp; };
+		07A5487D1F490FD900A3F433 /* PID.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = PID.cpp; path = ../../src/PID.cpp; sourceTree = "<group>"; };
+		07A5487E1F490FD900A3F433 /* PID.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = PID.h; path = ../../src/PID.h; sourceTree = "<group>"; };
+		07A548871F49518400A3F433 /* TWIDDLE.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TWIDDLE.h; path = ../../src/TWIDDLE.h; sourceTree = "<group>"; };
+		07A548881F49518400A3F433 /* TWIDDLE.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = TWIDDLE.cpp; path = ../../src/TWIDDLE.cpp; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -57,7 +64,12 @@
 		0782904E1F490DD900EBF857 /* xcode_project */ = {
 			isa = PBXGroup;
 			children = (
-				0782904F1F490DD900EBF857 /* main.cpp */,
+				07A548871F49518400A3F433 /* TWIDDLE.h */,
+				07A548881F49518400A3F433 /* TWIDDLE.cpp */,
+				07A5487B1F490FD900A3F433 /* json.hpp */,
+				07A5487C1F490FD900A3F433 /* main.cpp */,
+				07A5487D1F490FD900A3F433 /* PID.cpp */,
+				07A5487E1F490FD900A3F433 /* PID.h */,
 			);
 			path = xcode_project;
 			sourceTree = "<group>";
@@ -119,7 +131,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				078290501F490DD900EBF857 /* main.cpp in Sources */,
+				07A548891F49518400A3F433 /* TWIDDLE.cpp in Sources */,
+				07A548801F490FD900A3F433 /* PID.cpp in Sources */,
+				07A5487F1F490FD900A3F433 /* main.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -248,6 +262,7 @@
 				078290551F490DD900EBF857 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
