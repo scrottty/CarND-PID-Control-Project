@@ -22,6 +22,7 @@ The final PID controller was:
 effort = -0.0545267 x error - 0.001 x i_error - 0.596748 x d_error
 
 ```
+The final reulst can be seen in this [video](Final_Tuning.mov)
 
 ## Controller Elements
 ### Propotional Element
