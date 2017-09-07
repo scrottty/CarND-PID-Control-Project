@@ -11,4 +11,5 @@ mkdir build
 cd build
 cmake ..
 make
+open /Users/Ollie/Documents/CarND/term2_sim_mac/term2_sim.app
 ./pid

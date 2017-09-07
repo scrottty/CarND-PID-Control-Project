@@ -1,6 +1,9 @@
 #ifndef PID_H
 #define PID_H
 
+#include <chrono>
+#include <iostream>
+
 class PID {
 public:
   /*
@@ -18,6 +21,9 @@ public:
   double Ki;
   double Kd;
   
+  std::chrono::time_point<std::chrono::system_clock> prevTime;
+  std::chrono::time_point<std::chrono::system_clock> currentTime;
+  std::chrono::duration<double> timeDiff_duration;
   double timeDiff;
   
   double currentOutput;

@@ -4,6 +4,7 @@
 #include <stdio.h>
 #include <iostream>
 #include <chrono>
+#include <math.h>
 
 #include "PID.h"
 
@@ -34,9 +35,6 @@ private:
   bool m_tunningComplete;
 
   double m_cte;
-  
-  std::chrono::time_point<std::chrono::system_clock> now, prevTime;
-  std::chrono::duration<double> timeDiff;
 
   // ---- FUNCTIONS ----
   void runInitialStep(PID &pid);

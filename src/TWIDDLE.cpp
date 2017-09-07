@@ -7,10 +7,10 @@ TWIDDLE::TWIDDLE(double dp[3], double p[3]) :
   m_bestError(0.0),
   m_currentError(0.0),
   m_step_initialised(false),
-  TOL(0.01),
-  RESTART_VALUE(1500),
+  TOL(0.005),
+  RESTART_VALUE(4000),
   ACCUMSTART(100),
-  MIN_MAX_ERROR(8000),
+  MIN_MAX_ERROR(80000),
   m_restartSim(false),
   m_cte(0.0)
 {
@@ -19,8 +19,6 @@ TWIDDLE::TWIDDLE(double dp[3], double p[3]) :
     m_p[i] = p[i];
     m_dp[i] = dp[i];
   }
-  prevTime = std::chrono::system_clock::now();
-  now = std::chrono::system_clock::now();
 }
 
 void TWIDDLE::run(PID &pid, double cte)
@@ -61,10 +59,6 @@ void TWIDDLE::printValues()
 
 void TWIDDLE::runPID(PID &pid)
 {
-  now = std::chrono::system_clock::now();
-  timeDiff = now - prevTime;
-  pid.timeDiff = timeDiff.count();
-  prevTime = now;
   pid.UpdateError(m_cte);
   pid.CalcOutput();
 }
@@ -198,7 +192,6 @@ void TWIDDLE::checkTunningComplete()
   {
     sum += m_dp[i];
   }
-
-  if (sum < TOL)
+  if (fabs(sum) < TOL)
     m_tunningComplete = true;
 }
